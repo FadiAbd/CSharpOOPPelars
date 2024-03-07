@@ -14,21 +14,19 @@ namespace CSharpOOPPelars
 
         public int Age
         {
-            get
-            {
-                return age;
-            }
+            get => age;
             set
             {
-                if (value > 0)
-                    age = value;
-                else
-                    throw new ArgumentException("Age canno't be 0");
+                if (value <= 0)
+                {
+                    throw new ArgumentException("Åldern måste vara större än 0.", nameof(Age));
+                }
+                age = value;
             }
         }
 
         private string fName;
-        [Required(ErrorMessage = "The property is required.")]
+        //[Required(ErrorMessage = "The property is required.")]
 
         public string FName
         {
@@ -40,16 +38,16 @@ namespace CSharpOOPPelars
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentException("Name cannot be empty or null");
+                    throw new ArgumentException(
+                        "Efternamnet är obligatorisk",
+                        nameof(FName));
                 }
-                if (value.Length > 2 && value.Length <= 10)
+                if (value.Length < 3 || value.Length > 15)
                 {
-                    fName = value;
+                    throw new ArgumentException("Förnamnet måste vara mellan 2 och 10 tecken långt.", nameof(FName));
                 }
-                else
-                {
-                    throw new ArgumentException("Name must have min 2 letters and max 10 ");
-                }
+                fName = value;
+
 
             }
         }
@@ -64,16 +62,16 @@ namespace CSharpOOPPelars
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentException("Name cannot be empty or null");
+                    throw new ArgumentException(
+                        "Efternamnet är obligatorisk",
+                        nameof(LName));
                 }
-                if (value.Length > 3 && value.Length <= 15)
+                if (value.Length < 3 || value.Length > 15)
                 {
-                    lName = value;
+                    throw new ArgumentException("Förnamnet måste vara mellan 3 och 15 tecken långt.",nameof(LName));
                 }
-                else
-                {
-                    throw new ArgumentException("Name must have min 3 letters and max 15 ");
-                }
+                lName = value;
+
 
             }
         }
@@ -91,10 +89,14 @@ namespace CSharpOOPPelars
             Weight = weight;
         }
 
+        public Person()
+        {
+        }
+
         public override string ToString()
         {
             return $"\n Name:{FName} {LName},\n Age:{Age},\n Height:{Height},\n Weight:{Weight}";
-            
+
         }
     }
 
