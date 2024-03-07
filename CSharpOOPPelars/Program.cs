@@ -67,6 +67,38 @@ namespace CSharpOOPPelars
             {
                 Console.WriteLine(errors.UEMessage());
             }
+
+            Console.WriteLine();
+
+            Dog dog = new Dog();
+            dog.DoSound();
+            Bird bird = new Bird();
+            bird.DoSound();
+            Hedgehog hedgehog = new Hedgehog();
+            hedgehog.DoSound();
+            Worm worm = new Worm ();
+            worm.DoSound();
+            Wolf wolf = new Wolf ();
+            wolf.DoSound();
+            Horse horse = new Horse ();
+            horse.DoSound();
+
+            var wolfman = new Wolfman ();
+            wolfman.Talk();
+
+
+            Console.ReadKey();
+
+            /*13.F: Om vi under utvecklingen kommer fram till att samtliga fåglar behöver ett nytt
+            attribut, i vilken klass bör vi lägga det ?
+
+            Svaret : Bird klassen.
+
+            14.F : Om alla djur behöver det nya attributet, vart skulle man lägga det då ? 
+
+            Svaret Animal klassen */
+
+
         }
     }
 }
