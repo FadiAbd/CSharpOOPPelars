@@ -93,7 +93,7 @@ namespace CSharpOOPPelars
 
         public override string ToString()
         {
-            return $" Introducing a new person:\n Name:{FName} {LName},\n Age:{Age},\n Height:{Height},\n Weight:{Weight}";
+            return $"\n Name:{FName} {LName},\n Age:{Age},\n Height:{Height},\n Weight:{Weight}";
             
         }
     }

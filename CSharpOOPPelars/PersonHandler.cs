@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace CSharpOOPPelars
 {
@@ -17,6 +18,18 @@ namespace CSharpOOPPelars
         {
 
             return new Person(age,fname,lname,(int)height,(int)weight);
+        }
+
+        public void Drive(string fname, string lname)
+        {
+            string name = fname + " " + lname;
+            Console.WriteLine(name + " is driving.");
+        }
+
+        public void Study(string fname, string lname)
+        {
+            string name = fname + " " +  lname;
+            Console.WriteLine(name + " is studying.");
         }
     }
 }
