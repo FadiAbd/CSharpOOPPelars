@@ -14,11 +14,11 @@ namespace CSharpOOPPelars
 
         public abstract void DoSound();
 
+        public abstract string Stats();
+        protected Animal()
+        {
 
-        //protected Animal()
-        //{
-            
-        //}
+        }
 
     }
 }

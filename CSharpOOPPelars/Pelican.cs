@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpOOPPelars
 {
-    internal class Pelican: Bird
+    internal class Pelican : Bird
     {
         public double Height { get; set; }
     }

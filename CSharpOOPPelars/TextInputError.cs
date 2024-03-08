@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpOOPPelars
 {
-    internal class TextInputError:UserError
+    internal class TextInputError : UserError
     {
         public override string UEMessage()
         {

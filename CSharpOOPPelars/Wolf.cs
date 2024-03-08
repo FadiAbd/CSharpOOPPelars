@@ -12,7 +12,12 @@ namespace CSharpOOPPelars
 
         public override void DoSound()
         {
-            Console.WriteLine("Howl!");
+            Console.WriteLine($"The Wolf says: Howl!");
+        }
+
+        public override string Stats()
+        {
+            return $"Name:{Name} Age:{Age} Weight:{Weight}";
         }
     }
 }

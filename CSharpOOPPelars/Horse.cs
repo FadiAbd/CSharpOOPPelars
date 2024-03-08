@@ -11,7 +11,12 @@ namespace CSharpOOPPelars
         public int Height { get; set; }
         public override void DoSound()
         {
-            Console.WriteLine("Neigh!");
+            Console.WriteLine($"The Horse says: Neigh!");
+        }
+
+        public override string Stats()
+        {
+            return $"Name:{Name} Age:{Age} Weight:{Weight}";
         }
     }
 }

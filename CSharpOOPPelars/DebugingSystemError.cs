@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpOOPPelars
 {
-    internal class DebugingSystemError:IDESystemError
+    internal class DebugingSystemError : IDESystemError
     {
         public override string UEMessage()
         {

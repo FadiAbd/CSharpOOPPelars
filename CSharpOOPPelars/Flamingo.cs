@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpOOPPelars
 {
-    internal class Flamingo: Bird
+    internal class Flamingo : Bird
     {
         public bool IsPink { get; set; }
     }

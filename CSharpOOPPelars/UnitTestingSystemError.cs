@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpOOPPelars
 {
-    internal class UnitTestingSystemError: IDESystemError
+    internal class UnitTestingSystemError : IDESystemError
     {
         public override string UEMessage()
         {

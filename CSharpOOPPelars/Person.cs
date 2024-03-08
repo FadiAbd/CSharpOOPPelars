@@ -8,10 +8,11 @@ using System.Xml.Linq;
 
 namespace CSharpOOPPelars
 {
+    //3.1) Inkapsling
     internal class Person
     {
         private int age;
-
+        // Validating propreties: Age,LName.FName.
         public int Age
         {
             get => age;
@@ -68,7 +69,7 @@ namespace CSharpOOPPelars
                 }
                 if (value.Length < 3 || value.Length > 15)
                 {
-                    throw new ArgumentException("Förnamnet måste vara mellan 3 och 15 tecken långt.",nameof(LName));
+                    throw new ArgumentException("Förnamnet måste vara mellan 3 och 15 tecken långt.", nameof(LName));
                 }
                 lName = value;
 
@@ -92,7 +93,8 @@ namespace CSharpOOPPelars
         public Person()
         {
         }
-
+        //  overriding the ToString method in the Person class to format the output.
+        //  Then, calling this method in Main to display the person’s details
         public override string ToString()
         {
             return $"\n Name:{FName} {LName},\n Age:{Age},\n Height:{Height},\n Weight:{Weight}";

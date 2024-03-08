@@ -6,13 +6,23 @@ using System.Threading.Tasks;
 
 namespace CSharpOOPPelars
 {
-    internal class Dog : Animal,IAnimal
+    internal class Dog : Animal, IAnimal
     {
         public bool IsTrained { get; set; }
 
         public override void DoSound()
         {
-            Console.WriteLine("Bark!");
+            Console.WriteLine($"The Dog says: Bark!");
+        }
+
+        public override string Stats()
+        {
+            return $"Name:{Name} Age:{Age} Weight:{Weight}";
+        }
+
+        public string GetDogMessage()
+        {
+            return "Woof woof! I'm a happy dog!";
         }
     }
 }

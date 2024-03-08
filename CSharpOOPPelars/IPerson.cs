@@ -8,7 +8,7 @@ namespace CSharpOOPPelars
 {
     internal interface IPerson
     {
-         void Talk();
-        
+        void Talk();
+
     }
 }

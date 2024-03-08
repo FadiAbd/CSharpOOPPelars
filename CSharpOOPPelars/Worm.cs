@@ -11,7 +11,12 @@ namespace CSharpOOPPelars
         public bool IsPoisonous { get; set; }
         public override void DoSound()
         {
-            Console.WriteLine("Hisss!");
+            Console.WriteLine($"The Worm says: Hisss!");
+        }
+
+        public override string Stats()
+        {
+            return $"Name:{Name} Age:{Age} Weight:{Weight}";
         }
     }
 }

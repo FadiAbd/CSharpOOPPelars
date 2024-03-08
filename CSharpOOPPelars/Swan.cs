@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSharpOOPPelars
 {
-    internal class Swan: Bird
+    internal class Swan : Bird
     {
         public bool IsWhite { get; set; }
     }
