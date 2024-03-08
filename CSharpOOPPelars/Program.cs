@@ -92,6 +92,9 @@ namespace CSharpOOPPelars
             wolf.DoSound();
             Horse horse = new Horse();
             horse.DoSound();
+            Parrot parrot = new Parrot();
+            parrot.DoSound();
+            
 
             // 12. Implementera Talk() som skriver ut vad Wolfman säger.
             var wolfman = new Wolfman();
@@ -119,6 +122,7 @@ Svaret: Animal klassen */
             animals.Add(new Hedgehog { Name = "Hoggy", Age = 4, Weight = 5.55 });
             animals.Add(new Wolf { Name = "Wolfy", Age = 7, Weight = 35 });
             animals.Add(new Worm { Name = "Wormy", Age = 1, Weight = 0.11 });
+            animals.Add(new Parrot { Name = "Pippi", Age = 4, Weight = 1.7 });
 
             // Skriver ut samtliga Animals Stats() genom en foreach loop.
             //Gör en check i for-loopen ifall ett djur är också av typen IPerson
@@ -134,6 +138,7 @@ Svaret: Animal klassen */
                     Console.WriteLine();
                     // AnropaR Talk() för IPerson
                     person.Talk();
+                    Console.WriteLine("I can talk like a person"); 
 
                 }
                 else
