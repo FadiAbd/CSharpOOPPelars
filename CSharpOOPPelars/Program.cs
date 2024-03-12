@@ -50,7 +50,8 @@ namespace CSharpOOPPelars
             Console.WriteLine();
 
 
-            // 3.2) Polymorfism
+            // 3.2) Polymorfism
+
             List<UserError> Errors = new List<UserError>
             {
                     new NumericInputError(),
@@ -94,7 +95,7 @@ namespace CSharpOOPPelars
             horse.DoSound();
             Parrot parrot = new Parrot();
             parrot.DoSound();
-            
+
 
             // 12. Implementera Talk() som skriver ut vad Wolfman säger.
             var wolfman = new Wolfman();
@@ -138,7 +139,7 @@ Svaret: Animal klassen */
                     Console.WriteLine();
                     // AnropaR Talk() för IPerson
                     person.Talk();
-                    Console.WriteLine("I can talk like a person"); 
+                    Console.WriteLine("I can talk like a person");
 
                 }
                 else
@@ -175,9 +176,18 @@ Svaret: Animal klassen */
                sträng.
            16. Kommer du åt den metoden från Animals listan?
 
-           Svar: Nej, vi kan inte direkt komma åt den nya metoden från animals-listan eftersom             den inte är en del av Animal-klassen.
+           Svar: Nej, vi kan inte direkt komma åt den nya metoden från animals-listan eftersom 
+            den inte är en del av Animal-klassen.
 
-           17. F: Varför inte?            Svar:  Eftersom GetDogMessage() är en metod som endast finns i Dog-klassen,             kan vi inte anropa den direkt på ett objekt av typen Animal.            18. Hitta ett sätt att skriva ut din nya metod för dog genom en foreach på Animals.            Svar:  Vi kan använda en typkonvertering (cast) för att komma åt den nya metoden för hundar:*/
+           17. F: Varför inte?
+
+            Svar:  Eftersom GetDogMessage() är en metod som endast finns i Dog-klassen, 
+            kan vi inte anropa den direkt på ett objekt av typen Animal.
+
+
+            18. Hitta ett sätt att skriva ut din nya metod för dog genom en foreach på Animals.
+
+            Svar:  Vi kan använda en typkonvertering (cast) för att komma åt den nya metoden för hundar:*/
 
             Console.WriteLine("Get Dog Message");
             Console.WriteLine("----------------");
@@ -192,8 +202,6 @@ Svaret: Animal klassen */
 
             Console.ReadLine();
 
-            //List<Dog> dogs = new List<Dog>();
-            //dogs.Add(new Horse {})
 
             /* 9. F: Försök att lägga till en häst i listan av hundar. Varför fungerar inte det?
 
@@ -208,7 +216,11 @@ Svaret: Animal klassen */
 
             11. Skriv ut samtliga Animals Stats() genom en foreach loop.
             12. Testa och se så det fungerar.
-            13. F: Förklara vad det är som händer.            Svar: Jag har anropat Animals.Stats(); i koden uppe och det fungerade jag fick med alla djur            som ärver av Animal klassen och som har den override metoden stats som implementerar             den abstracta Stats metoden i Animal klassen. */
+            13. F: Förklara vad det är som händer.
+
+            Svar: Jag har anropat Animals.Stats(); i koden uppe och det fungerade jag fick med alla djur
+            som ärver av Animal klassen och som har den override metoden stats som implementerar 
+            den abstracta Stats metoden i Animal klassen. */
 
         }
     }
